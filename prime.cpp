@@ -10,6 +10,17 @@ bool isPrimeHalf(int n, long long* modOps)
     {
         return false;
     }
+    // Gets edge case for 2 when null
+    if (n == 2)
+    {
+        if (modOps)
+        {
+            counter++;
+            *modOps += counter;
+        }
+        return true;
+    }
+
     // Checks for divisibility up to n/2
     for (int i = 2; i <= n/2; i++)
     {
@@ -40,6 +51,16 @@ bool isPrimeSqrt(int n, long long* modOps)
     if (n < 2)
     {
         return false;
+    }
+    // Gets edge case for 2
+    if (n == 2)
+    {
+        if (modOps)
+        {
+            counter++;
+            *modOps += counter;
+        }
+        return true;
     }
     for (int i = 2; i <= sqrt(n); i++)
     {

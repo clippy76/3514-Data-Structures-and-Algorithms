@@ -42,7 +42,7 @@ TEST_CASE("Testing mod operation counts for the two")
     isPrimeSqrt(64, &sqrtOps);
     REQUIRE(halfOps == 1);
     REQUIRE(sqrtOps == 1);
-    REQUIRE(countModOps(isPrimeHalf, 0, 10) == 9);
+    REQUIRE(countModOps(isPrimeHalf, 0, 10) == 10);
 }
 // Test edge cases
 TEST_CASE("Testing edge cases")
