@@ -7,14 +7,14 @@ TEST_CASE("Testing prime numbers half", "[isPrimeHalf]")
 {
     REQUIRE(isPrimeHalf(4) == false);
     REQUIRE(isPrimeHalf(67) == true);
-    REQUIRE(isPrimeHalf(97) == true);
+    REQUIRE(isPrimeHalf(3) == true);
     REQUIRE(isPrimeHalf(38) == false);
 }
 TEST_CASE("Testing prime numbers sqrt", "[isPrimeSqrt]")
 {
     REQUIRE(isPrimeSqrt(4) == false);
     REQUIRE(isPrimeSqrt(49) == false);
-    REQUIRE(isPrimeSqrt(67) == true);
+    REQUIRE(isPrimeSqrt(3) == true);
     REQUIRE(isPrimeSqrt(97) == true);
 }
 // Testing composite numbers
@@ -26,9 +26,9 @@ TEST_CASE("Testing composite numbers", "[compositeNumbers]")
     REQUIRE(isPrimeSqrt(93) == false);
 }
 // Test for few range of prime numbers if both methods are consistent
-TEST_CASE("Testing range (no edge cases) to 1000", "[comparison]")
+TEST_CASE("Testing range to 1000", "[comparison]")
 {
-    for (int i = 2; i <= 1000; i++)
+    for (int i = 0; i <= 1000; i++)
     {
         REQUIRE(isPrimeHalf(i) == isPrimeSqrt(i));
     }
