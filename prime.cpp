@@ -10,12 +10,8 @@ bool isPrimeHalf(int n, long long* modOps)
     {
         return false;
     }
-    if (n == 2)
-    {
-        return true;
-    }
     // Checks for divisibility up to n/2
-    for (int i = 3; i <= n/2; i++)
+    for (int i = 2; i <= n/2; i++)
     {
         counter++;
         // Checks if number is prime
@@ -45,11 +41,7 @@ bool isPrimeSqrt(int n, long long* modOps)
     {
         return false;
     }
-    if (n == 2)
-    {
-        return true;
-    }
-    for (int i = 3; i <= sqrt(n); i++)
+    for (int i = 2; i <= sqrt(n); i++)
     {
         counter++;
         // Checks if number is prime
