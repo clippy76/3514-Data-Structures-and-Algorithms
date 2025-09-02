@@ -10,13 +10,17 @@ bool isPrimeHalf(int n, long long* modOps)
     {
         return false;
     }
-    // Checks for divisibility up to n/2
-    for (int i = 2; i <= n/2; i++)
+    if (n == 2)
     {
+        return true;
+    }
+    // Checks for divisibility up to n/2
+    for (int i = 3; i <= n/2; i++)
+    {
+        counter++;
         // Checks if number is prime
         if (n % i == 0)
         {
-            counter++;
             // Checks for if modOps is not nullptr
             if (modOps)
             {
@@ -41,12 +45,16 @@ bool isPrimeSqrt(int n, long long* modOps)
     {
         return false;
     }
-    for (int i = 2; i <= sqrt(n); i++)
+    if (n == 2)
     {
+        return true;
+    }
+    for (int i = 3; i <= sqrt(n); i++)
+    {
+        counter++;
         // Checks if number is prime
         if (n % i == 0)
         {
-            counter++;
             // Checks for if modOps is not nullptr
             if (modOps)
             {
