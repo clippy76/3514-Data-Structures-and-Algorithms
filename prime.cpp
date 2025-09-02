@@ -47,7 +47,7 @@ bool isPrimeHalf(int n, long long* modOps)
             return false;
         }
     }
-    Checks for if modOps is not nullptr
+    // Checks for if modOps is not nullptr
     if (modOps)
     {
         *modOps += counter;
@@ -99,7 +99,7 @@ bool isPrimeSqrt(int n, long long* modOps)
             return false;
         }
     }
-    Checks for if modOps is not nullptr
+    // Checks for if modOps is not nullptr ss
     if (modOps)
     {
         *modOps += counter;
@@ -110,6 +110,7 @@ bool isPrimeSqrt(int n, long long* modOps)
 long long countModOps(PrimeFn isPrime, int lo, int hi) 
 {
     long long counter = 0;
+    
     for (int i = lo; i <= hi; i++)
     {
         isPrime(i, &counter);
