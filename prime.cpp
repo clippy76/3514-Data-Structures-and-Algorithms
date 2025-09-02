@@ -47,11 +47,11 @@ bool isPrimeHalf(int n, long long* modOps)
             return false;
         }
     }
-    // Checks for if modOps is not nullptr
-    // if (modOps)
-    // {
-    //     *modOps += counter;
-    // }
+    Checks for if modOps is not nullptr
+    if (modOps)
+    {
+        *modOps += counter;
+    }
     return true;
 }
 
@@ -99,11 +99,11 @@ bool isPrimeSqrt(int n, long long* modOps)
             return false;
         }
     }
-    // Checks for if modOps is not nullptr
-    // if (modOps)
-    // {
-    //     *modOps += counter;
-    // }
+    Checks for if modOps is not nullptr
+    if (modOps)
+    {
+        *modOps += counter;
+    }
     return true;
 }
 
