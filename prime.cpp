@@ -71,7 +71,8 @@ bool isPrimeSqrt(int n, long long* modOps)
         return false;
     }
 
-    for (int i = 3; i <= sqrt(n); i+=2)
+    int root = static_cast<int>(sqrt(n));
+    for (int i = 3; i <= root; i+=2)
     {
         counter++;
         // Checks if number is prime
