@@ -52,21 +52,16 @@ bool isPrimeSqrt(int n, long long* modOps)
     {
         return false;
     }
-    // Gets edge case for 2 when null
-    if (n == 2)
-    {
-        return true;
-    }
 
+    counter++;
     // Gets rid of redundant checking for even numbers
     if (n % 2 == 0)
     {
         if (modOps)
         {
-            counter++;
             *modOps += counter;
         }
-        return false;
+        return n == 2;
     }
 
     for (int i = 3; i <= sqrt(n); i+=2)
