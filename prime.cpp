@@ -10,10 +10,10 @@ bool isPrimeHalf(int n, long long* modOps)
     {
         return false;
     }
-    counter++;
     // Gets rid of redundant checking for even numbers
     if (n % 2 == 0)
     {
+        counter++;
         if (modOps)
         {
             *modOps += counter;
@@ -53,10 +53,10 @@ bool isPrimeSqrt(int n, long long* modOps)
         return false;
     }
 
-    counter++;
     // Gets rid of redundant checking for even numbers
     if (n % 2 == 0)
     {
+        counter++;
         if (modOps)
         {
             *modOps += counter;
