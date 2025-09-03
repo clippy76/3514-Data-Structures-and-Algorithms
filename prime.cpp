@@ -4,7 +4,6 @@
 
 bool isPrimeHalf(int n, long long* modOps) 
 {
-    long long counter = 0;
     // Gets edge case for 0 and 1
     if (n < 2)
     {
@@ -19,10 +18,14 @@ bool isPrimeHalf(int n, long long* modOps)
     {
         if (modOps)
         {
-            counter++;
-            *modOps += counter;
+            *modOps++;
         }
         return false;
+    }   
+    // Checks for if n % 2
+    if (modOps)
+    {
+        *modOps++;
     }
 
     // Checks for divisibility up to n/2
@@ -31,8 +34,7 @@ bool isPrimeHalf(int n, long long* modOps)
         // Checks for if modOps is not nullptr
         if (modOps)
         {
-            counter++;
-            *modOps += counter;
+            *modOps ++;
         }
         // Checks if number is prime
         if (n % i == 0)
@@ -45,7 +47,6 @@ bool isPrimeHalf(int n, long long* modOps)
 
 bool isPrimeSqrt(int n, long long* modOps) 
 {
-    long long counter = 0;
     // Gets edge case for 0 and 1
     if (n < 2)
     {
@@ -60,10 +61,14 @@ bool isPrimeSqrt(int n, long long* modOps)
     {
         if (modOps)
         {
-            counter++;
-            *modOps += counter;
+            *modOps++;
         }
         return false;
+    }
+    // Checks for if n % 2
+    if (modOps)
+    {
+        *modOps++;
     }
 
     int root = static_cast<int>(sqrt(n));
@@ -72,8 +77,7 @@ bool isPrimeSqrt(int n, long long* modOps)
         // Checks for if modOps is not nullptr
         if (modOps)
         {
-            counter++;
-            *modOps += counter;
+            *modOps++;
         }
         // Checks if number is prime
         if (n % i == 0)
