@@ -10,6 +10,10 @@ bool isPrimeHalf(int n, long long* modOps)
     {
         return false;
     }
+    if (n == 2)
+    {
+        return true;
+    }
     // Gets rid of redundant checking for even numbers
     if (n % 2 == 0)
     {
@@ -18,7 +22,7 @@ bool isPrimeHalf(int n, long long* modOps)
         {
             *modOps += counter;
         }
-        return n == 2;
+        return false;
     }
 
     // Checks for divisibility up to n/2
@@ -52,7 +56,10 @@ bool isPrimeSqrt(int n, long long* modOps)
     {
         return false;
     }
-
+    if (n == 2)
+    {
+        return true;
+    }
     // Gets rid of redundant checking for even numbers
     if (n % 2 == 0)
     {
@@ -61,7 +68,7 @@ bool isPrimeSqrt(int n, long long* modOps)
         {
             *modOps += counter;
         }
-        return n == 2;
+        return false;
     }
 
     for (int i = 3; i <= sqrt(n); i+=2)
