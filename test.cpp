@@ -31,7 +31,7 @@ TEST_CASE("Testing range to 1000", "[comparison]")
     // for (int i = 0; i <= 1000; i++)
     // {
     //     REQUIRE(isPrimeHalf(i) == isPrimeSqrt(i));
-    // }
+    // }                  
 }
 // Testing mod operation counts
 TEST_CASE("Testing mod operation counts for the two")

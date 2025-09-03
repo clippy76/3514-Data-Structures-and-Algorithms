@@ -13,11 +13,6 @@ bool isPrimeHalf(int n, long long* modOps)
     // Gets edge case for 2 when null
     if (n == 2)
     {
-        if (modOps)
-        {
-            counter++;
-            *modOps += counter;
-        }
         return true;
     }
 
@@ -66,11 +61,6 @@ bool isPrimeSqrt(int n, long long* modOps)
     // Gets edge case for 2 when null
     if (n == 2)
     {
-        if (modOps)
-        {
-            counter++;
-            *modOps += counter;
-        }
         return true;
     }
 
