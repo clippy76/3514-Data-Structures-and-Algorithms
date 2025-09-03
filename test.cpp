@@ -28,10 +28,10 @@ TEST_CASE("Testing composite numbers", "[compositeNumbers]")
 // Test for few range of prime numbers if both methods are consistent
 TEST_CASE("Testing range to 1000", "[comparison]")
 {
-    // for (int i = 0; i <= 1000; i++)
-    // {
-    //     REQUIRE(isPrimeHalf(i) == isPrimeSqrt(i));
-    // }                  
+    for (int i = 0; i <= 1000; i++)
+    {
+        REQUIRE(isPrimeHalf(i) == isPrimeSqrt(i));
+    }                  
 }
 // Testing mod operation counts
 TEST_CASE("Testing mod operation counts for the two")
@@ -40,10 +40,10 @@ TEST_CASE("Testing mod operation counts for the two")
     long long sqrtOps = 0;
     isPrimeHalf(64, &halfOps);
     isPrimeSqrt(64, &sqrtOps);
-    REQUIRE(halfOps == 0);
-    REQUIRE(sqrtOps == 0);
-    REQUIRE(countModOps(isPrimeHalf, 0, 100) == 0);
-    REQUIRE(countModOps(isPrimeSqrt, 0, 100) == 0);
+    REQUIRE(halfOps == 1);
+    REQUIRE(sqrtOps == 1);
+    REQUIRE(countModOps(isPrimeHalf, 0, 10) == 10);
+    REQUIRE(countModOps(isPrimeSqrt, 0, 10) == 9);
 }
 // Test edge cases
 TEST_CASE("Testing edge cases")

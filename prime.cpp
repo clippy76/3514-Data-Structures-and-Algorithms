@@ -22,11 +22,11 @@ bool isPrimeHalf(int n, long long* modOps)
         }
         return false;
     }   
-    // // Checks for if n % 2
-    // if (modOps)
-    // {
-    //     *modOps+=1;
-    // }
+    // Checks for if n % 2 since it was attempted previously 
+    if (modOps)
+    {
+        *modOps+=1;
+    }
 
     // Checks for divisibility up to n/2
     for (int i = 3; i <= n/2; i+=2)
@@ -65,11 +65,11 @@ bool isPrimeSqrt(int n, long long* modOps)
         }
         return false;
     }
-    // // Checks for if n % 2
-    // if (modOps)
-    // {
-    //     *modOps+=1;
-    // }
+    // Checks for if n % 2 since it was attempted previously 
+    if (modOps)
+    {
+        *modOps+=1;
+    }
 
     int root = static_cast<int>(sqrt(n));
     for (int i = 3; i <= root; i+=2)
