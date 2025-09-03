@@ -17,9 +17,9 @@ bool isPrimeHalf(int n, long long* modOps)
     // Gets rid of redundant checking for even numbers
     if (n % 2 == 0)
     {
-        counter++;
         if (modOps)
         {
+            counter++;
             *modOps += counter;
         }
         return false;
@@ -28,22 +28,17 @@ bool isPrimeHalf(int n, long long* modOps)
     // Checks for divisibility up to n/2
     for (int i = 3; i <= n/2; i+=2)
     {
-        counter++;
+        // Checks for if modOps is not nullptr
+        if (modOps)
+        {
+            counter++;
+            *modOps += counter;
+        }
         // Checks if number is prime
         if (n % i == 0)
         {
-            // Checks for if modOps is not nullptr
-            if (modOps)
-            {
-                *modOps += counter;
-            }
             return false;
         }
-    }
-    // Checks for if modOps is not nullptr
-    if (modOps)
-    {
-        *modOps += counter;
     }
     return true;
 }
@@ -63,9 +58,9 @@ bool isPrimeSqrt(int n, long long* modOps)
     // Gets rid of redundant checking for even numbers
     if (n % 2 == 0)
     {
-        counter++;
         if (modOps)
         {
+            counter++;
             *modOps += counter;
         }
         return false;
@@ -74,23 +69,19 @@ bool isPrimeSqrt(int n, long long* modOps)
     int root = static_cast<int>(sqrt(n));
     for (int i = 3; i <= root; i+=2)
     {
-        counter++;
+        // Checks for if modOps is not nullptr
+        if (modOps)
+        {
+            counter++;
+            *modOps += counter;
+        }
         // Checks if number is prime
         if (n % i == 0)
         {
-            // Checks for if modOps is not nullptr
-            if (modOps)
-            {
-                *modOps += counter;
-            }
             return false;
         }
     }
     // Checks for if modOps is not nullptr ss
-    if (modOps)
-    {
-        *modOps += counter;
-    }
     return true;
 }
 
